@@ -72,10 +72,6 @@ public final class NavStack<Route: Hashable>: NSObject, UINavigationControllerDe
     /// Handler called when a stack operation cannot be completed safely.
     private let onMisuse: @MainActor (String) -> Void
 
-    /// Called after any navigation transition lands, so a host (the tab shell)
-    /// can react to the depth changing without re-implementing the stack's rules.
-    public var onDidShow: (@MainActor () -> Void)?
-
     /// Builds the view controller for a route this stack owns.
     private let makeViewController: @MainActor (Route) -> UIViewController
 
@@ -233,7 +229,6 @@ public final class NavStack<Route: Hashable>: NSObject, UINavigationControllerDe
         animated: Bool
     ) {
         syncRoutes()
-        onDidShow?()
     }
 
     // MARK: - Building

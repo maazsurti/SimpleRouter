@@ -33,7 +33,13 @@ not by the router. Routes render themselves, so there is no central `switch`.
 .package(url: "https://github.com/maazsurti/SimpleRouter.git", from: "1.0.0")
 ```
 
-Requires iOS 17+. Logging goes through the `Log` protocol from the `Diagnostics` product of
+Requires iOS 17+. Two products:
+
+- **`SimpleRouter`** — UIKit: `NavStack` owns a `UINavigationController`. Set
+  `NavStack.onDidShow` to hear when any transition lands (a tab shell uses it to react to depth).
+- **`SimpleRouterSwiftUI`** — the same model for SwiftUI apps: `AppRouter`, `NavStack`, `Navigator`
+  and routes that render themselves, hosted by `Host` (root + sheets/covers/alerts/dialogs) and
+  `Stack` (a `NavigationStack` bound to a `NavStack`). Import one or the other; they share type names. Logging goes through the `Log` protocol from the `Diagnostics` product of
 [Networking](https://github.com/maazsurti/Networking), which SwiftPM fetches with it.
 
 ## Quickstart
