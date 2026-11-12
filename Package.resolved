@@ -1,0 +1,15 @@
+{
+  "originHash" : "c49477780166645b61543d62f3b076145ab0f171030adc2d6fec758fa9b604a0",
+  "pins" : [
+    {
+      "identity" : "networking",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/maazsurti/Networking.git",
+      "state" : {
+        "revision" : "3c2c39bc88acca8936b64e3f70554a4e86d8cfb3",
+        "version" : "1.0.0"
+      }
+    }
+  ],
+  "version" : 3
+}
