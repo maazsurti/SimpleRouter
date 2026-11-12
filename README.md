@@ -30,7 +30,7 @@ not by the router. Routes render themselves, so there is no central `switch`.
 ## Install
 
 ```swift
-.package(url: "https://github.com/maazsurti/SimpleRouter.git", from: "1.0.0")
+.package(url: "https://github.com/maazsurti/SimpleRouter.git", from: "1.1.0")
 ```
 
 Requires iOS 17+. Two products:
